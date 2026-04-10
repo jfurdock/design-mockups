@@ -65,6 +65,7 @@
   <div class="tab" onclick="switchTab('pill')">G2: Pill Bar</div>
   <div class="tab" onclick="switchTab('minimal')">G3: Title Only</div>
   <div class="tab" onclick="switchTab('wide')">G4: Wide Strip</div>
+  <div class="tab" onclick="switchTab('wideplus')">G5: Wide + Description</div>
 </div>
 
 <!-- ============================== G1: COMPACT ============================== -->
@@ -682,6 +683,193 @@
               <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#8635; Watch again</div>
             </div>
             <div class="progress-track" style="margin-top:8px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== G5: WIDE + DESCRIPTION ============================== -->
+<div id="tab-wideplus" class="tab-content">
+  <p class="var-desc">Full-width glass strip with a two-line layout: title on top, description text below. More context for the viewer without leaving the compact strip format.</p>
+
+  <!-- Watch Now -->
+  <div class="state-header">Watch Now</div>
+  <div class="state-desc">Fresh content, not yet started</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,0.5));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:14px 18px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                  <div style="font-size:8px;color:#ff8820;text-transform:uppercase;letter-spacing:2px;">Message</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">45 min</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">How to Suffer Better</div>
+                <div style="font-size:10px;color:rgba(255,255,255,0.45);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Turn your suffering into strength. We have good news and bad news. Bad news: suffering exists. The good? God can actually use that suffering to make you better.</div>
+              </div>
+              <div style="flex-shrink:0;padding-top:14px;">
+                <div style="background:#ff8820;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;">&#9654; Watch now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,0.5));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:14px 18px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                  <div style="font-size:8px;color:#ff8820;text-transform:uppercase;letter-spacing:2px;">Message</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">45 min</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">How to Suffer Better</div>
+                <div style="font-size:10px;color:rgba(255,255,255,0.45);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Turn your suffering into strength. We have good news and bad news. Bad news: suffering exists. The good? God can actually use that suffering to make you better.</div>
+              </div>
+              <div style="flex-shrink:0;padding-top:14px;">
+                <div style="background:#ff8820;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;">&#9654; Watch now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Continue Watching -->
+  <div class="state-header">Continue Watching</div>
+  <div class="state-desc">In progress &mdash; 35% complete, 29 min remaining</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,0.5));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:12px 18px 14px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                  <div style="font-size:8px;color:#ff8820;text-transform:uppercase;letter-spacing:2px;">Message</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">29 min left</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">How to Suffer Better</div>
+                <div style="font-size:10px;color:rgba(255,255,255,0.45);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Turn your suffering into strength. We have good news and bad news. Bad news: suffering exists. The good? God can actually use that suffering to make you better.</div>
+              </div>
+              <div style="flex-shrink:0;padding-top:14px;">
+                <div style="background:#ff8820;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;">&#9654; Continue</div>
+              </div>
+            </div>
+            <div class="progress-track" style="margin-top:10px;"><div class="progress-fill" style="width:35%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,0.5));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:12px 18px 14px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                  <div style="font-size:8px;color:#ff8820;text-transform:uppercase;letter-spacing:2px;">Message</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">29 min left</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">How to Suffer Better</div>
+                <div style="font-size:10px;color:rgba(255,255,255,0.45);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Turn your suffering into strength. We have good news and bad news. Bad news: suffering exists. The good? God can actually use that suffering to make you better.</div>
+              </div>
+              <div style="flex-shrink:0;padding-top:14px;">
+                <div style="background:#ff8820;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;">&#9654; Continue</div>
+              </div>
+            </div>
+            <div class="progress-track" style="margin-top:10px;"><div class="progress-fill" style="width:35%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Watch Again -->
+  <div class="state-header">Watch Again</div>
+  <div class="state-desc">Completed &mdash; full progress bar</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,0.5));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:12px 18px 14px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                  <div style="font-size:8px;color:#ff8820;text-transform:uppercase;letter-spacing:2px;">Message</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">Watched</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">How to Suffer Better</div>
+                <div style="font-size:10px;color:rgba(255,255,255,0.45);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Turn your suffering into strength. We have good news and bad news. Bad news: suffering exists. The good? God can actually use that suffering to make you better.</div>
+              </div>
+              <div style="flex-shrink:0;padding-top:14px;">
+                <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;">&#8635; Watch again</div>
+              </div>
+            </div>
+            <div class="progress-track" style="margin-top:10px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,0.5));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:12px 18px 14px;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                  <div style="font-size:8px;color:#ff8820;text-transform:uppercase;letter-spacing:2px;">Message</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">Watched</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;margin-bottom:4px;">How to Suffer Better</div>
+                <div style="font-size:10px;color:rgba(255,255,255,0.45);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Turn your suffering into strength. We have good news and bad news. Bad news: suffering exists. The good? God can actually use that suffering to make you better.</div>
+              </div>
+              <div style="flex-shrink:0;padding-top:14px;">
+                <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;">&#8635; Watch again</div>
+              </div>
+            </div>
+            <div class="progress-track" style="margin-top:10px;"><div class="progress-fill" style="width:100%;"></div></div>
           </div>
         </div>
       </div>
