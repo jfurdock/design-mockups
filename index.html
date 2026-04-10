@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TV Hero — Glass Card Mockups</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 32px 24px; max-width: 1400px; margin: 0 auto; }
+
+  h1 { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .page-subtitle { font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 28px; }
+
+  /* Tabs */
+  .tabs { display: flex; gap: 0; margin-bottom: 0; border-bottom: 2px solid #222; position: sticky; top: 0; background: #0a0a0a; z-index: 10; padding-top: 8px; }
+  .tab { padding: 12px 24px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.4); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; user-select: none; }
+  .tab:hover { color: rgba(255,255,255,0.6); }
+  .tab.active { color: #f5c518; border-bottom-color: #f5c518; }
+
+  .tab-content { display: none; padding-top: 28px; }
+  .tab-content.active { display: block; }
+
+  /* Section headers */
+  .var-desc { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 28px; line-height: 1.5; max-width: 700px; }
+
+  /* State headers */
+  .state-header { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 4px; margin-top: 36px; }
+  .state-header:first-of-type { margin-top: 0; }
+  .state-desc { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+
+  /* Grid */
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px; }
+  .panel-label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.25); margin-bottom: 6px; }
+  .hero-frame { border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+
+  /* Divider */
+  .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 36px 0 0; }
+
+  /* Glass base */
+  .glass {
+    background: rgba(28,28,30,0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Progress bar */
+  .progress-track { height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: #f5c518; border-radius: 2px; }
+
+  @media (max-width: 768px) {
+    .comparison { grid-template-columns: 1fr; }
+    .tabs { overflow-x: auto; flex-wrap: nowrap; }
+    .tab { white-space: nowrap; padding: 10px 16px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>TV Hero — Floating Glass Card</h1>
+<p class="page-subtitle">Mockups showing how each variation handles clean images vs. images with baked-in text, across watch states</p>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('compact')">G1: Compact</div>
+  <div class="tab" onclick="switchTab('pill')">G2: Pill Bar</div>
+  <div class="tab" onclick="switchTab('minimal')">G3: Title Only</div>
+  <div class="tab" onclick="switchTab('wide')">G4: Wide Strip</div>
+</div>
+
+<!-- ============================== G1: COMPACT ============================== -->
+<div id="tab-compact" class="tab-content active">
+  <p class="var-desc">Tight padding, no description. Title, subtitle, and action in a compact floating card.</p>
+
+  <!-- Watch Now -->
+  <div class="state-header">Watch Now</div>
+  <div class="state-desc">Fresh content, not yet started</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:12px 16px;max-width:48%;">
+            <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Series</div>
+            <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;margin-bottom:3px;">How to Suffer Better</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:10px;">Turn Your Suffering Into Strength</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="background:#f5c518;color:#1c1c1e;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:600;">&#9654; Watch now</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);">45 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:12px 16px;max-width:48%;">
+            <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Series</div>
+            <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;margin-bottom:3px;">How to Suffer Better</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:10px;">Turn Your Suffering Into Strength</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="background:#f5c518;color:#1c1c1e;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:600;">&#9654; Watch now</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);">45 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Continue Watching -->
+  <div class="state-header">Continue Watching</div>
+  <div class="state-desc">In progress &mdash; 35% complete, 29 min remaining</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:12px 16px;max-width:48%;">
+            <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Series</div>
+            <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;margin-bottom:3px;">How to Suffer Better</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:8px;">Turn Your Suffering Into Strength</div>
+            <div class="progress-track" style="margin-bottom:6px;"><div class="progress-fill" style="width:35%;"></div></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div style="background:#f5c518;color:#1c1c1e;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:600;">&#9654; Continue</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);">29 min left</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:12px 16px;max-width:48%;">
+            <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Series</div>
+            <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;margin-bottom:3px;">How to Suffer Better</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:8px;">Turn Your Suffering Into Strength</div>
+            <div class="progress-track" style="margin-bottom:6px;"><div class="progress-fill" style="width:35%;"></div></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div style="background:#f5c518;color:#1c1c1e;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:600;">&#9654; Continue</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);">29 min left</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Watch Again -->
+  <div class="state-header">Watch Again</div>
+  <div class="state-desc">Completed &mdash; full progress bar</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:12px 16px;max-width:48%;">
+            <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Series</div>
+            <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;margin-bottom:3px;">How to Suffer Better</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:8px;">Turn Your Suffering Into Strength</div>
+            <div class="progress-track" style="margin-bottom:6px;"><div class="progress-fill" style="width:100%;"></div></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div style="background:rgba(255,255,255,0.15);color:white;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:600;">&#8635; Watch again</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);">Watched</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:12px 16px;max-width:48%;">
+            <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Series</div>
+            <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;margin-bottom:3px;">How to Suffer Better</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:8px;">Turn Your Suffering Into Strength</div>
+            <div class="progress-track" style="margin-bottom:6px;"><div class="progress-fill" style="width:100%;"></div></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div style="background:rgba(255,255,255,0.15);color:white;padding:5px 14px;border-radius:4px;font-size:10px;font-weight:600;">&#8635; Watch again</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);">Watched</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== G2: PILL BAR ============================== -->
+<div id="tab-pill" class="tab-content">
+  <p class="var-desc">Ultra-compact single-row rounded pill. Title and button side by side. Maximum image visibility.</p>
+
+  <!-- Watch Now -->
+  <div class="state-header">Watch Now</div>
+  <div class="state-desc">Fresh content, not yet started</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;right:14px;border-radius:28px;padding:10px 12px 10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
+              <div style="font-size:9px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;flex-shrink:0;">Series</div>
+              <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:13px;font-weight:600;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better</div>
+              </div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);flex-shrink:0;">45 min</div>
+            </div>
+            <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Watch now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;right:14px;border-radius:28px;padding:10px 12px 10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
+              <div style="font-size:9px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;flex-shrink:0;">Series</div>
+              <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:13px;font-weight:600;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better</div>
+              </div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);flex-shrink:0;">45 min</div>
+            </div>
+            <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Watch now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Continue Watching -->
+  <div class="state-header">Continue Watching</div>
+  <div class="state-desc">In progress &mdash; 35% complete, 29 min remaining</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;right:14px;border-radius:28px;padding:8px 12px 10px 20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
+                <div style="font-size:9px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;flex-shrink:0;">Series</div>
+                <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-size:13px;font-weight:600;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better</div>
+                </div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.35);flex-shrink:0;">29 min left</div>
+              </div>
+              <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Continue</div>
+            </div>
+            <div class="progress-track" style="margin-top:6px;border-radius:4px;"><div class="progress-fill" style="width:35%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;right:14px;border-radius:28px;padding:8px 12px 10px 20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
+                <div style="font-size:9px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;flex-shrink:0;">Series</div>
+                <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-size:13px;font-weight:600;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better</div>
+                </div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.35);flex-shrink:0;">29 min left</div>
+              </div>
+              <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Continue</div>
+            </div>
+            <div class="progress-track" style="margin-top:6px;border-radius:4px;"><div class="progress-fill" style="width:35%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Watch Again -->
+  <div class="state-header">Watch Again</div>
+  <div class="state-desc">Completed &mdash; full progress bar</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;right:14px;border-radius:28px;padding:8px 12px 10px 20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
+                <div style="font-size:9px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;flex-shrink:0;">Series</div>
+                <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-size:13px;font-weight:600;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better</div>
+                </div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.35);flex-shrink:0;">Watched</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#8635; Watch again</div>
+            </div>
+            <div class="progress-track" style="margin-top:6px;border-radius:4px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;right:14px;border-radius:28px;padding:8px 12px 10px 20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
+                <div style="font-size:9px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;flex-shrink:0;">Series</div>
+                <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);flex-shrink:0;"></div>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-size:13px;font-weight:600;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better</div>
+                </div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.35);flex-shrink:0;">Watched</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#8635; Watch again</div>
+            </div>
+            <div class="progress-track" style="margin-top:6px;border-radius:4px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== G3: TITLE ONLY ============================== -->
+<div id="tab-minimal" class="tab-content">
+  <p class="var-desc">Minimal card with circular play button and just the title. Smallest footprint &mdash; lets the image do the talking.</p>
+
+  <!-- Watch Now -->
+  <div class="state-header">Watch Now</div>
+  <div class="state-desc">Fresh content, not yet started</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:#f5c518;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#1c1c1e;flex-shrink:0;">&#9654;</div>
+            <div>
+              <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:2px;">Series</div>
+              <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;">How to Suffer Better</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px;">45 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:#f5c518;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#1c1c1e;flex-shrink:0;">&#9654;</div>
+            <div>
+              <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;margin-bottom:2px;">Series</div>
+              <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;">How to Suffer Better</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px;">45 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Continue Watching -->
+  <div class="state-header">Continue Watching</div>
+  <div class="state-desc">In progress &mdash; 35% complete, 29 min remaining</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:14px;min-width:220px;">
+            <div style="position:relative;width:32px;height:32px;flex-shrink:0;">
+              <svg width="32" height="32" viewBox="0 0 32 32" style="transform:rotate(-90deg);">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>
+                <circle cx="16" cy="16" r="14" fill="none" stroke="#f5c518" stroke-width="2.5" stroke-dasharray="87.96" stroke-dashoffset="57.17" stroke-linecap="round"/>
+              </svg>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;">&#9654;</div>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;">How to Suffer Better</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px;">29 min left</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:14px;min-width:220px;">
+            <div style="position:relative;width:32px;height:32px;flex-shrink:0;">
+              <svg width="32" height="32" viewBox="0 0 32 32" style="transform:rotate(-90deg);">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>
+                <circle cx="16" cy="16" r="14" fill="none" stroke="#f5c518" stroke-width="2.5" stroke-dasharray="87.96" stroke-dashoffset="57.17" stroke-linecap="round"/>
+              </svg>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;">&#9654;</div>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;">How to Suffer Better</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px;">29 min left</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Watch Again -->
+  <div class="state-header">Watch Again</div>
+  <div class="state-desc">Completed</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:rgba(255,255,255,0.15);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:white;flex-shrink:0;">&#8635;</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;">How to Suffer Better</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px;">Watched</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,0.3) 100%);"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:14px;left:14px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:rgba(255,255,255,0.15);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:white;flex-shrink:0;">&#8635;</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white;line-height:1.2;">How to Suffer Better</div>
+              <div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px;">Watched</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== G4: WIDE STRIP ============================== -->
+<div id="tab-wide" class="tab-content">
+  <p class="var-desc">Full-width glass strip across the bottom. Title, description, duration, and button in a compact bar.</p>
+
+  <!-- Watch Now -->
+  <div class="state-header">Watch Now</div>
+  <div class="state-desc">Fresh content, not yet started</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.4));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:12px 18px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                  <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;">Series</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">45 min</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better | Turn Your Suffering Into Strength</div>
+              </div>
+              <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Watch now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.4));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:12px 18px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                  <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;">Series</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">45 min</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better | Turn Your Suffering Into Strength</div>
+              </div>
+              <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Watch now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Continue Watching -->
+  <div class="state-header">Continue Watching</div>
+  <div class="state-desc">In progress &mdash; 35% complete, 29 min remaining</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.4));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:10px 18px 12px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                  <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;">Series</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">29 min left</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better | Turn Your Suffering Into Strength</div>
+              </div>
+              <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Continue</div>
+            </div>
+            <div class="progress-track" style="margin-top:8px;"><div class="progress-fill" style="width:35%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.4));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:10px 18px 12px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                  <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;">Series</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">29 min left</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better | Turn Your Suffering Into Strength</div>
+              </div>
+              <div style="background:#f5c518;color:#1c1c1e;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#9654; Continue</div>
+            </div>
+            <div class="progress-track" style="margin-top:8px;"><div class="progress-fill" style="width:35%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Watch Again -->
+  <div class="state-header">Watch Again</div>
+  <div class="state-desc">Completed &mdash; full progress bar</div>
+  <div class="comparison">
+    <div>
+      <div class="panel-label">Clean Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_without_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.4));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:10px 18px 12px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                  <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;">Series</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">Watched</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better | Turn Your Suffering Into Strength</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#8635; Watch again</div>
+            </div>
+            <div class="progress-track" style="margin-top:8px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel-label">Text-Heavy Image</div>
+      <div class="hero-frame">
+        <div style="background:#1c1c1e;aspect-ratio:16/9;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:url('hero_with_text.png') center/cover;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.4));"></div>
+          <div style="position:absolute;top:16px;right:20px;font-size:16px;color:rgba(255,255,255,0.7);font-weight:800;">&#10006;</div>
+          <div class="glass" style="position:absolute;bottom:12px;left:12px;right:12px;border-radius:10px;padding:10px 18px 12px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+                  <div style="font-size:8px;color:#f5c518;text-transform:uppercase;letter-spacing:2px;">Series</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.25);">&bull;</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.4);">Watched</div>
+                </div>
+                <div style="font-size:14px;font-weight:700;color:white;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">How to Suffer Better | Turn Your Suffering Into Strength</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.15);color:white;padding:6px 18px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap;flex-shrink:0;">&#8635; Watch again</div>
+            </div>
+            <div class="progress-track" style="margin-top:8px;"><div class="progress-fill" style="width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelector('[onclick="switchTab(\'' + id + '\')"]').classList.add('active');
+}
+</script>
+
+</body>
+</html>
